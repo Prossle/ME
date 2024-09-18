@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    background-image: linear-gradient(to top , black , #222);
+    width: 800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #099fff;
+    -webkit-text-fill-color: transparent;
+}
+div::before , div::after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-image: linear-gradient(45deg , #e6fb04 , #ff6600 , #00ff66 , #00ffff , #ff00ff , #ff0099 , #6e0dd0 , #ff3300 , #099fff);
+    background-size: 400%;
+    animation: ani 10s linear infinite alternate;
+    z-index: -1;
+}
+
+div::after{
+    filter: blur(20px);
+}
+
+@keyframes ani {
+    100%{
+        background-position: 400% 0;
+    }
+}
